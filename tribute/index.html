@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>tribute to ash</title>
+</head>
+<body>
+
+<header>
+  <h1>Tribute to ASH KETCHUM</h1>
+  <p>Journey of a Champion</p>
+</header>
+
+<div class="container">
+  <img src="./ash.jpg" alt="ash">
+  <p>
+  Ash Ketchum is a beloved fictional character from the Pokémon franchise, known for his journey from being a novice Pokémon Trainer to becoming a seasoned and highly respected Pokémon Master. His story resonates with audiences worldwide as he embodies the spirit of determination, perseverance, and growth.
+
+Ash started his journey as an aspiring Pokémon Trainer from Pallet Town in the Kanto region.<br> Despite his initial lack of experience and knowledge, he possessed an unwavering passion for Pokémon and a strong desire to become a Pokémon Master. With his trusty partner Pikachu by his side, Ash embarked on an epic adventure to catch and train Pokémon, compete in Pokémon battles, and ultimately achieve his dream.
+
+Throughout his journey, Ash faced numerous challenges and obstacles. He encountered rival trainers, battled against formidable opponents, and experienced both victories and defeats.<br> However, what truly set Ash apart was his resilience and ability to learn from his mistakes. Despite setbacks, he remained determined and continuously strived to improve himself and his Pokémon.
+
+As Ash traveled across different regions, including Kanto, Johto, Hoenn, Sinnoh, Unova, Kalos, Alola, and Galar, he formed strong bonds with various Pokémon and made lifelong friends. He learned valuable lessons about friendship, teamwork, and the importance of understanding and respecting Pokémon.
+
+One of Ash's defining moments came when he won the Pokémon League Championship in the Alola region. After years of hard work and dedication, Ash finally achieved his long-awaited goal of becoming a Pokémon Champion.<br> This victory not only showcased his growth as a Trainer but also served as a testament to his indomitable spirit and unwavering determination.
+
+Ash Ketchum's journey from being a novice Trainer to becoming a Pokémon Master is a testament to the power of perseverance, passion, and belief in oneself. His story inspires fans of all ages to chase their dreams, overcome obstacles, and never give up, no matter how daunting the challenges may seem. As one of the most iconic characters in pop culture, Ash Ketchum's legacy continues to resonate with generations of Pokémon fans around the world.
+  </p>
+  <div class="carousel-container">
+    <div class="carousel-slide">
+      <div class="carousel-item">
+        <img src="./ash1.jpg" alt="Image 1">
+      </div>
+      <div class="carousel-item">
+        <img src="./ash2.jpg" alt="Image 2">
+      </div>
+      <div class="carousel-item">
+        <img src="./ash3.jpg" alt="Image 3">
+      </div>
+
+      <div class="carousel-item">
+        <img src="./ash.jpg" alt="Image 4">
+      </div>
+
+      <div class="carousel-item">
+        <img src="./ash1.jpg" alt="Image 5">
+      </div>
+ 
+    </div>
+  </div>
+  
+  <div class="carousel-nav">
+    <button class="nav-button" onclick="prevSlide()">Previous</button>
+    <button class="nav-button" onclick="nextSlide()">Next</button>
+  </div>
+  
+  <script>
+    let currentIndex = 0;
+    const slides = document.querySelectorAll('.carousel-item');
+  
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        if (i === index) {
+          slide.style.display = 'block';
+        } else {
+          slide.style.display = 'none';
+        }
+      });
+    }
+  
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % slides.length;
+      showSlide(currentIndex);
+    }
+  
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      showSlide(currentIndex);
+    }
+  
+    showSlide(currentIndex);
+  </script>
+</body>
+</html>
